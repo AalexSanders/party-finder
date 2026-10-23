@@ -1,0 +1,115 @@
+.cover {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  border-radius: var(--radius-md);
+  flex-shrink: 0;
+}
+
+.blob1,
+.blob2 {
+  position: absolute;
+  border-radius: 50%;
+  background: #fff;
+}
+
+.blob1 {
+  width: 80%;
+  height: 80%;
+  top: -27%;
+  right: -30%;
+  opacity: 0.18;
+}
+
+.blob2 {
+  width: 52%;
+  height: 52%;
+  bottom: -20%;
+  left: -16%;
+  opacity: 0.12;
+}
+
+.coverIcon {
+  position: relative;
+  color: #fff;
+}
+
+.card {
+  display: flex;
+  gap: 14px;
+  width: 100%;
+  padding: 12px;
+  border: 1px solid var(--color-border-default);
+  border-radius: var(--radius-lg);
+  background: var(--color-bg-surface);
+  text-align: left;
+  transition: border-color 0.15s, background-color 0.15s, box-shadow 0.15s;
+}
+
+.clickable:hover {
+  border-color: var(--color-border-strong);
+  box-shadow: var(--shadow-card);
+}
+
+.selected,
+.selected:hover {
+  border-color: var(--color-border-focus);
+  background: var(--color-brand-soft);
+  box-shadow: inset 0 0 0 0.5px var(--color-border-focus);
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  flex: 1;
+  min-width: 0;
+}
+
+.top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+.title {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+
+.meta {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.row {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  min-width: 0;
+  font-size: 13px;
+  line-height: 18px;
+  color: var(--color-text-secondary);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.row svg {
+  flex-shrink: 0;
+  color: var(--color-text-tertiary);
+}
+
+.meetups,
+.meetups svg {
+  color: var(--color-text-brand);
+  font-size: 12px;
+  line-height: 16px;
+  font-weight: 500;
+}

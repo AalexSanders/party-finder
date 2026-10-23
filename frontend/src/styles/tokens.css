@@ -1,0 +1,68 @@
+/* Токены из Figma (коллекция Tokens, страница «Foundations & Components»). */
+:root {
+  --color-bg-page: #f6f5fa;
+  --color-bg-surface: #ffffff;
+  --color-bg-subtle: #f1eff7;
+  --color-bg-muted: #e7e4f0;
+  --color-bg-inverse: #17141f;
+
+  --color-text-primary: #17141f;
+  --color-text-secondary: #5e5a6e;
+  --color-text-tertiary: #9693a5;
+  --color-text-inverse: #ffffff;
+  --color-text-brand: #5b3ff5;
+
+  --color-border-default: #e4e1ee;
+  --color-border-strong: #cbc6da;
+  --color-border-focus: #6d4aff;
+
+  --color-brand-primary: #6d4aff;
+  --color-brand-hover: #5b3ff5;
+  --color-brand-soft: #eeeaff;
+  --color-accent-coral: #ff5a5f;
+
+  --color-success: #16a34a;
+  --color-success-soft: #e7f7ec;
+  --color-error: #e5484d;
+  --color-error-soft: #fdecec;
+  --color-warning: #d97706;
+  --color-warning-soft: #fef3e2;
+
+  --color-cat-music: #7c5cff;
+  --color-cat-art: #0ea5a4;
+  --color-cat-sport: #22a55b;
+  --color-cat-party: #ec4899;
+  --color-cat-food: #f97316;
+  --color-cat-cinema: #3b82f6;
+
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 16px;
+  --radius-xl: 24px;
+  --radius-full: 999px;
+
+  --shadow-card: 0 2px 8px rgba(23, 20, 51, 0.06), 0 8px 24px -4px rgba(23, 20, 51, 0.06);
+  --shadow-floating: 0 4px 12px rgba(23, 20, 51, 0.08), 0 24px 48px -8px rgba(23, 20, 51, 0.14);
+  --focus-ring: 0 0 0 4px rgba(109, 74, 255, 0.15);
+
+  --font-family: 'Onest', system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --header-height: 72px;
+}
+
+/* Типографика: стили текста из Figma. */
+.t-display { font-size: 40px; line-height: 48px; font-weight: 700; letter-spacing: -1.2px; }
+.t-h1 { font-size: 32px; line-height: 40px; font-weight: 700; letter-spacing: -0.8px; }
+.t-h2 { font-size: 24px; line-height: 32px; font-weight: 600; letter-spacing: -0.4px; }
+.t-h3 { font-size: 20px; line-height: 28px; font-weight: 600; letter-spacing: -0.2px; }
+.t-h4 { font-size: 16px; line-height: 24px; font-weight: 600; }
+.t-body-l { font-size: 16px; line-height: 24px; }
+.t-body-m { font-size: 14px; line-height: 20px; }
+.t-body-m-medium { font-size: 14px; line-height: 20px; font-weight: 500; }
+.t-body-s { font-size: 13px; line-height: 18px; }
+.t-caption { font-size: 12px; line-height: 16px; font-weight: 500; }
+.t-overline { font-size: 11px; line-height: 14px; font-weight: 600; letter-spacing: 0.6px; text-transform: uppercase; }
+
+.c-secondary { color: var(--color-text-secondary); }
+.c-tertiary { color: var(--color-text-tertiary); }
+.c-brand { color: var(--color-text-brand); }
+.c-error { color: var(--color-error); }

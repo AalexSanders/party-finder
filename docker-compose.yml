@@ -1,0 +1,52 @@
+name: party-finder
+
+# Всё приложение одной командой: docker compose up --build
+# Сайт — http://localhost:8080, API и Swagger — http://localhost:5080/swagger
+services:
+  db:
+    image: postgres:17-alpine
+    restart: unless-stopped
+    environment:
+      POSTGRES_DB: partyfinder
+      POSTGRES_USER: partyfinder
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-partyfinder}
+    ports:
+      - "5432:5432"
+    volumes:
+      - db-data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U partyfinder -d partyfinder"]
+      interval: 3s
+      timeout: 3s
+      retries: 20
+
+  api:
+    build: ./backend
+    restart: unless-stopped
+    environment:
+      ConnectionStrings__Default: Host=db;Port=5432;Database=partyfinder;Username=partyfinder;Password=${POSTGRES_PASSWORD:-partyfinder}
+      Jwt__Key: ${JWT_KEY:-local-compose-signing-key-change-me-0123456789}
+      Seed__Enabled: ${SEED_DEMO_DATA:-true}
+    ports:
+      - "5080:8080"
+    depends_on:
+      db:
+        condition: service_healthy
+    healthcheck:
+      # В образе aspnet нет curl/wget; порт открывается после миграций и сидинга.
+      test: ["CMD-SHELL", "bash -c '</dev/tcp/127.0.0.1/8080' || exit 1"]
+      interval: 5s
+      timeout: 3s
+      retries: 20
+
+  web:
+    build: ./frontend
+    restart: unless-stopped
+    ports:
+      - "8080:80"
+    depends_on:
+      api:
+        condition: service_healthy
+
+volumes:
+  db-data:

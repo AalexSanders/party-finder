@@ -1,0 +1,200 @@
+.segmented {
+  display: inline-flex;
+  gap: 4px;
+  padding: 4px;
+  background: var(--color-bg-muted);
+  border-radius: var(--radius-md);
+  align-self: flex-start;
+}
+
+.segment {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  height: 36px;
+  padding: 0 16px;
+  border: none;
+  border-radius: var(--radius-sm);
+  background: transparent;
+  color: var(--color-text-secondary);
+  font-weight: 500;
+}
+
+.segment:hover {
+  color: var(--color-text-primary);
+}
+
+.segmentActive {
+  background: var(--color-bg-surface);
+  color: var(--color-text-primary);
+  font-weight: 600;
+  box-shadow: var(--shadow-card);
+}
+
+.count {
+  padding: 1px 7px;
+  border-radius: var(--radius-full);
+  background: var(--color-bg-muted);
+  font-size: 12px;
+  line-height: 16px;
+  font-weight: 500;
+  color: var(--color-text-secondary);
+}
+
+.segmentActive .count {
+  background: var(--color-brand-soft);
+  color: var(--color-text-brand);
+}
+
+.label {
+  font-size: 12px;
+  line-height: 16px;
+  font-weight: 500;
+  color: var(--color-text-secondary);
+}
+
+.error {
+  font-size: 12px;
+  line-height: 16px;
+  font-weight: 500;
+  color: var(--color-error);
+}
+
+.stepperField {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.stepper {
+  display: inline-flex;
+  align-items: center;
+  align-self: flex-start;
+  border: 1px solid var(--color-border-default);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  background: var(--color-bg-surface);
+}
+
+.stepper button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border: none;
+  background: var(--color-bg-subtle);
+}
+
+.stepper button:hover:not(:disabled) {
+  background: var(--color-bg-muted);
+}
+
+.stepper button:disabled {
+  color: var(--color-text-tertiary);
+  cursor: not-allowed;
+}
+
+.stepperValue {
+  width: 56px;
+  text-align: center;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.radioCard {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex: 1;
+  min-width: 0;
+  padding: 12px 14px;
+  border: 1px solid var(--color-border-default);
+  border-radius: var(--radius-md);
+  background: var(--color-bg-surface);
+  cursor: pointer;
+  transition: border-color 0.15s, background-color 0.15s;
+}
+
+.radioCard:hover {
+  border-color: var(--color-border-strong);
+}
+
+.radioCard:focus-within {
+  box-shadow: var(--focus-ring);
+}
+
+.radioSelected,
+.radioSelected:hover {
+  border-color: var(--color-border-focus);
+  background: var(--color-brand-soft);
+  box-shadow: inset 0 0 0 0.5px var(--color-border-focus);
+}
+
+.radioIcon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  flex-shrink: 0;
+  border-radius: var(--radius-sm);
+  background: var(--color-bg-subtle);
+  color: var(--color-text-secondary);
+}
+
+.radioSelected .radioIcon {
+  background: var(--color-bg-surface);
+  color: var(--color-brand-primary);
+}
+
+.radioText {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  flex: 1;
+  min-width: 0;
+}
+
+.radio {
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+  border-radius: 50%;
+  border: 1.5px solid var(--color-border-strong);
+  background: var(--color-bg-surface);
+}
+
+.radioSelected .radio {
+  border: 5px solid var(--color-bg-surface);
+  background: var(--color-brand-primary);
+  box-shadow: 0 0 0 1.5px var(--color-brand-primary);
+}
+
+.checkbox {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+}
+
+.box {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 20px;
+  height: 20px;
+  border-radius: 6px;
+  border: 1.5px solid var(--color-border-strong);
+  background: var(--color-bg-surface);
+  color: var(--color-text-inverse);
+}
+
+.checkbox:focus-within .box {
+  box-shadow: var(--focus-ring);
+}
+
+.boxOn {
+  border-color: var(--color-brand-primary);
+  background: var(--color-brand-primary);
+}

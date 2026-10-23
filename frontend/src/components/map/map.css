@@ -1,0 +1,106 @@
+/* Leaflet рендерит маркеры строкой HTML, поэтому стили пинов глобальные (префикс pf-). */
+.pf-map {
+  position: absolute;
+  inset: 0;
+}
+
+.pf-pin {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: var(--pin);
+  border: 2.5px solid #fff;
+  box-shadow: 0 3px 8px rgba(23, 20, 51, 0.22);
+  transition: transform 0.15s;
+  cursor: pointer;
+}
+
+.pf-pin:hover {
+  transform: scale(1.1);
+}
+
+.pf-pin--selected {
+  width: 48px;
+  height: 48px;
+  border-width: 3px;
+  box-shadow: 0 6px 16px rgba(23, 20, 51, 0.25), 0 0 0 8px color-mix(in srgb, var(--pin) 25%, transparent);
+}
+
+.pf-pin--selected:hover {
+  transform: none;
+}
+
+.pf-user {
+  position: relative;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: rgba(109, 74, 255, 0.16);
+}
+
+.pf-user span {
+  position: absolute;
+  inset: 15px;
+  border-radius: 50%;
+  background: #6d4aff;
+  border: 3px solid #fff;
+}
+
+.pf-map-controls {
+  position: absolute;
+  bottom: 24px;
+  z-index: 400;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  transition: right 0.2s;
+}
+
+.pf-map-zoom,
+.pf-map-locate {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: hidden;
+  border-radius: var(--radius-md);
+  background: var(--color-bg-surface);
+  box-shadow: var(--shadow-card);
+}
+
+.pf-map-zoom button,
+.pf-map-locate {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border: none;
+  background: var(--color-bg-surface);
+  color: var(--color-text-primary);
+}
+
+.pf-map-locate {
+  color: var(--color-brand-primary);
+}
+
+.pf-map-zoom button:hover,
+.pf-map-locate:hover {
+  background: var(--color-bg-subtle);
+}
+
+.pf-map-divider {
+  width: 24px;
+  height: 1px;
+  background: var(--color-border-default);
+}
+
+.leaflet-tile-pane {
+  filter: saturate(0.45) brightness(1.04) contrast(0.92);
+}
+
+.leaflet-control-attribution {
+  font-size: 10px;
+}

@@ -1,0 +1,98 @@
+.category {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 4px 8px;
+  border-radius: var(--radius-full);
+  font-size: 12px;
+  line-height: 16px;
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+.pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 10px;
+  border-radius: var(--radius-full);
+  font-size: 12px;
+  line-height: 16px;
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+.dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: currentColor;
+}
+
+.success { color: var(--color-success); background: var(--color-success-soft); }
+.warning { color: var(--color-warning); background: var(--color-warning-soft); }
+.error { color: var(--color-error); background: var(--color-error-soft); }
+.neutral { color: var(--color-text-secondary); background: var(--color-bg-subtle); }
+.brand { color: var(--color-brand-primary); background: var(--color-brand-soft); }
+
+.chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  height: 36px;
+  padding: 0 14px;
+  border: 1px solid var(--color-border-default);
+  border-radius: var(--radius-full);
+  background: var(--color-bg-surface);
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 500;
+  white-space: nowrap;
+  flex-shrink: 0;
+  transition: background-color 0.15s, border-color 0.15s;
+}
+
+.chip:hover {
+  border-color: var(--color-border-strong);
+}
+
+.chipActive,
+.chipActive:hover {
+  background: var(--color-bg-inverse);
+  border-color: var(--color-bg-inverse);
+  color: var(--color-text-inverse);
+}
+
+.avatar {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  border-radius: 50%;
+  box-shadow: 0 0 0 2px var(--color-bg-surface);
+  font-weight: 500;
+  user-select: none;
+}
+
+.avatar-s { width: 24px; height: 24px; font-size: 10px; font-weight: 600; }
+.avatar-m { width: 32px; height: 32px; font-size: 12px; }
+.avatar-l { width: 40px; height: 40px; font-size: 14px; }
+.avatar-xl { width: 72px; height: 72px; font-size: 24px; font-weight: 600; }
+
+.stack {
+  display: inline-flex;
+}
+
+.stack > * {
+  position: relative;
+}
+
+.stack > * + * {
+  margin-left: -8px;
+}
+
+/* Первый аватар — сверху, как в Figma (itemReverseZIndex). */
+.stack > :nth-child(1) { z-index: 4; }
+.stack > :nth-child(2) { z-index: 3; }
+.stack > :nth-child(3) { z-index: 2; }
+.stack > :nth-child(4) { z-index: 1; }

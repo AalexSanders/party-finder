@@ -1,0 +1,114 @@
+.screen {
+  display: flex;
+  height: 100%;
+  min-height: 720px;
+  background: var(--color-bg-surface);
+}
+
+.brand {
+  position: relative;
+  width: 680px;
+  flex-shrink: 0;
+  overflow: hidden;
+  background: linear-gradient(140deg, #5b3ff5, #ff5a5f);
+  color: #fff;
+}
+
+/* Стилизованная «карта»: сетка кварталов поверх градиента. */
+.brandMap {
+  position: absolute;
+  inset: 40% -10% -10% -10%;
+  opacity: 0.18;
+  background-image:
+    linear-gradient(90deg, transparent 94px, #fff 94px, #fff 104px, transparent 104px),
+    linear-gradient(0deg, transparent 72px, #fff 72px, #fff 80px, transparent 80px);
+  background-size: 112px 86px;
+  transform: rotate(-9deg);
+}
+
+.pin {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: 2.5px solid #fff;
+  box-shadow: 0 3px 8px rgba(23, 20, 51, 0.22);
+}
+
+.brandLogo {
+  position: absolute;
+  top: 48px;
+  left: 56px;
+}
+
+.headline {
+  position: absolute;
+  top: 150px;
+  left: 56px;
+  width: 520px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.headline p {
+  opacity: 0.85;
+}
+
+.formSide {
+  position: relative;
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow-y: auto;
+  padding: 40px;
+}
+
+.close {
+  position: absolute;
+  top: 32px;
+  right: 32px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border: none;
+  border-radius: 50%;
+  background: var(--color-bg-subtle);
+}
+
+.close:hover {
+  background: var(--color-bg-muted);
+}
+
+.form {
+  width: 400px;
+}
+
+.formInner {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.head {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.switch {
+  text-align: center;
+  color: var(--color-text-secondary);
+}
